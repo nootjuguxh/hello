@@ -1,0 +1,76 @@
+import turtle
+import time
+
+# Function to draw a heart
+def draw_heart():
+    turtle.color('red')
+    turtle.begin_fill()
+    turtle.fillcolor('red')
+    turtle.left(50)
+    turtle.forward(133)
+    turtle.circle(50, 200)
+    turtle.right(140)
+    turtle.circle(50, 200)
+    turtle.forward(133)
+    turtle.end_fill()
+
+# Function to blink the text "SIKE"
+def blink_sike():
+    turtle.penup()
+    turtle.goto(-50, -50)
+    turtle.color('black')
+
+    for _ in range(5):
+        turtle.pendown()
+        turtle.write('SIKE', font=('Arial', 24, 'bold'))
+        turtle.penup()
+        turtle.clear()
+        time.sleep(0.5)  # Wait for 0.5 seconds
+        turtle.forward(20)
+        time.sleep(0.5)  # Wait for 0.5 seconds
+
+# Function to draw a complete vertical cross on top of the heart
+def draw_cross():
+    turtle.penup()
+    turtle.goto(0, 70)
+    turtle.pendown()
+    turtle.color('black')
+    turtle.left(90)
+    
+    # Draw the vertical line
+    turtle.forward(140)
+    
+    # Draw the horizontal line
+    turtle.backward(70)
+    turtle.right(90)
+    turtle.forward(70)
+    turtle.backward(140)
+
+# Set up the turtle
+turtle.speed(2)
+turtle.pensize(2)
+
+# Draw the heart
+draw_heart()
+
+# Blink the text "SIKE"
+blink_sike()
+
+# Draw the complete cross on top of the heart
+draw_cross()
+
+# Hide the turtle
+turtle.hideturtle()
+
+# Keep the window open
+turtle.done()
+
+
+
+
+
+
+
+
+
+
